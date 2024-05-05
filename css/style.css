@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+:root {
+    --red: #D01418;
+    --gray: #222222;
+    --white: #F3F3F3;
+    --black: #000000;
+    --green: #619D00;
+}
+* {
+    font-family: roboto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* section header */
+header {
+    background-color: var(--gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px;
+    height: 100px;
+    width: 100vw;
+    margin: 0;
+    position: fixed;
+}
+
+header nav .hamburger{
+    display: none;
+    font-size: 2rem;
+}
+
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.875rem;
+}
+
+header .logo .game{
+    padding-left: 11.26px;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+header .logo .shop{
+    font-size: 1.875rem;
+    font-weight: 400;
+    color: var(--red);
+}
+/* section menu */
+header .menu{
+    display: flex;
+    align-items: center;
+    gap: 46px;
+    font-size: 1rem;
+}
+
+header .menu ul{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header .menu ul a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+header .menu ul a:hover{
+    color: var(--red);
+}
+
+main {
+    margin: 0 auto;
+    padding: 20px 0;
+    min-height: calc(100vh - 100px - 150px); 
+    background-color: #e1e1e1;
+}
+
+/* section slide */
+
+main section.slide{
+    top: 100px;
+    height: 512px;
+    width: 100vw;
+    background-image: url("../img/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main section.slide .container{
+    margin: 134px 39px;
+    padding: 0;
+}
+
+main section.slide h1{
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+main section.slide span{
+    font-size: 2.5rem;
+    color: var(--red);
+    font-weight: 700;
+}
+
+main section.slide button{
+    font-size: 1.5625rem;
+    width: 220px;
+    height: 61px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--red);
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* section product */
+
+main section.product{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main section.product h2{
+    font-size: 1.875rem;
+    margin: 25px auto;
+}
+
+main section.product .container-product{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+main section.product .tarjeta {
+    width: 240px;
+    height: 322px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.2px;
+}
+
+main section.product .tarjeta .juego{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 55px;
+    background-color: var(--white);
+    border-radius: 5px 5px 0px 0px;;
+}
+
+main section.product .tarjeta .info{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: start;
+    background-color: var(--white);
+    padding: 20px 20px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+main section.product .tarjeta .info .cuota{
+    font-size: 0.8125rem;
+}
+
+main section.product .tarjeta .info .envio{
+    font-size: 0.625rem;
+    color: var(--green);
+}
+/* section banner */
+
+main section.banner{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main section.banner h2{
+    font-size: 1.875rem;
+    margin: 25px auto;
+}
+
+main section.banner .container-banner{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px 114px;
+}
+
+main section.banner .tarjeta-silla {
+    font-size: 1.5625rem;
+    width: 360px;
+    height: 135px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    color: var(--white);
+    background-image: url(/img/bannerSilla.svg);
+}
+
+main section.banner .tarjeta-pc {
+    font-size: 1.5625rem;
+    width: 360px;
+    height: 135px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    color: var(--white);
+    background-image: url(/img/bannerPC.svg);
+}
+/* section footer */
+
+
+@media screen and (max-width:  768px) {
+    
+    header .menu ul{
+        display: none;
+    }
+    header nav .hamburger {
+        display: block;
+        width: 1.5rem;
+    }
+}
