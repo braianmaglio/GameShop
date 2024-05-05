@@ -233,7 +233,70 @@ main section.banner .tarjeta-pc {
     background-image: url(/img/bannerPC.svg);
 }
 /* section footer */
+footer .container-footer {
+    background-color: var(--gray);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px;
+    height: 191px;
+    width: 100vw;
+    margin: 0;
+    gap: 30px 124px;
+}
 
+footer .container-footer .redes{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    gap: 20px; 
+}
+
+footer .container-footer .redes h3{
+    font-size: 1.5625rem;
+}
+
+footer .container-footer .redes .container-iconos{
+    width: 168px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .container-footer .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.875rem;
+}
+
+footer .container-footer .logo .game{
+    padding-left: 11.26px;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+footer .container-footer .logo .shop{
+    font-size: 1.875rem;
+    font-weight: 400;
+    color: var(--red);
+}
+
+footer .copyright{
+    height: 25px;
+    background: #C4C4C4;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.625rem;
+    color: var(--black);
+}
 
 @media screen and (max-width:  768px) {
     
