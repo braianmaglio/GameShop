@@ -247,7 +247,7 @@ main section.banner .tarjeta-silla {
     align-items: flex-end;
     padding: 10px;
     color: var(--white);
-    background-image: url(/img/bannerSilla.svg);
+    background-image: url(../img/bannerSilla.svg);
 }
 
 main section.banner .tarjeta-pc {
@@ -261,7 +261,7 @@ main section.banner .tarjeta-pc {
     align-items: flex-end;
     padding: 10px;
     color: var(--white);
-    background-image: url(/img/bannerPC.svg);
+    background-image: url(../img/bannerPC.svg);
 }
 /* section footer */
 footer .container-footer {
