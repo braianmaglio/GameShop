@@ -20,9 +20,9 @@ header {
     align-items: center; 
     padding: 20px;
     height: 100px;
-    width: 100vw;
+    width: 100%;
     margin: 0;
-    position: fixed;
+    position: absolute;
 }
 
 header nav .hamburger{
@@ -84,7 +84,7 @@ main {
 main section.slide{
     top: 100px;
     height: 512px;
-    width: 100vw;
+    width: 100%;
     background-image: url("../img/background.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -112,7 +112,7 @@ main section.slide span{
     font-weight: 700;
 }
 
-main section.slide button{
+main section.slide .container button{
     font-size: 1.5625rem;
     width: 220px;
     height: 61px;
@@ -122,6 +122,32 @@ main section.slide button{
     background-color: var(--red);
     color: var(--white);
     cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/*** ESTILOS BOTÓN GROW SKEW ***/
+main .slide .container button:hover {
+    color: var(--red);/* color de fuente hover */
+}
+main .slide .container button::after {
+    content: "";
+    background: var(--white); /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.3s ease;
+}
+main .slide .container button:hover::after {
+    transition: all 0.3s ease-out;
+    transform: skewX(-45deg) scale(1, 1);
 }
 
 /* section product */
@@ -153,6 +179,11 @@ main section.product .tarjeta {
     display: flex;
     flex-flow: column wrap;
     gap: 0.2px;
+}
+
+main section.product .tarjeta:hover{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
 }
 
 main section.product .tarjeta .juego{
@@ -241,7 +272,7 @@ footer .container-footer {
     align-items: center; 
     padding: 20px;
     height: 191px;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     gap: 30px 124px;
 }
